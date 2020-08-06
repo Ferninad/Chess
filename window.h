@@ -26,21 +26,21 @@ class win{
 win :: win(){
     screenWidth = 600;
     screenHeight = 600;
-    // //Error Checking/Initialisation
-    // if (!Init())
-    // {
-    //     printf("Failed to Initialize");
-    //     return -1;
-    // }
+    //Error Checking/Initialisation
+    if (!Init())
+    {
+        printf("Failed to Initialize");
+        throw -1;
+    }
 
-    // // Clear buffer with black background
-    // glClearColor(0.0, 0.0, 0.0, 1.0);
-    // glClear(GL_COLOR_BUFFER_BIT);
+    // Clear buffer with black background
+    glClearColor(0.0, 0.0, 0.0, 1.0);
+    glClear(GL_COLOR_BUFFER_BIT);
 
-    // //Swap Render Buffers
-    // SDL_GL_SwapWindow(window);
-    // SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-    // SDL_RenderClear(renderer);
+    //Swap Render Buffers
+    SDL_GL_SwapWindow(window);
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+    SDL_RenderClear(renderer);
 }
 
 win :: win(int width, int height){
